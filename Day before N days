@@ -1,0 +1,7 @@
+class Solution:
+    def findAnswer(self, d, n): 
+        if(n<=7):
+           return abs(n-d)
+        else:
+            n=int(n/7)
+            return d+n
