@@ -1,0 +1,12 @@
+#User function Template for python3
+
+arr = tuple(map(int, input().split()))
+x = int(input())
+p=list(arr)
+for i in range(len(p)):
+    if(p[i]==x):
+        print(i)
+########### Write your code below ###############
+# Print the index of x in arr
+
+########### Write your code above ###############
