@@ -1,0 +1,47 @@
+/*
+High-Rated and Expensive Products
+Difficulty: MediumAccuracy: 49.85%Submissions: 2K+Points: 4Average Time: 20m
+Problem Description:
+A product is considered high-rated and expensive if it meets the following conditions:
+
+The product has a rating of at least 4.5.
+
+The product is available in stock (quantity greater than 0).
+
+The product price is at least $300.
+
+Pandas Schema:
+
+
+product_id: Unique ID for each product (Primary key).
+
+product_name: The name of the product.
+
+rating: The rating of the product (float, ranging from 1 to 5).
+
+quantity_in_stock: The number of units available in stock.
+
+price: The price of the product.
+
+Task:
+Write a solution to find the product_id, product_name, rating, quantity_in_stock, and price of all products that are high-rated, in stock, and expensive based on the criteria above.
+
+Return the result table in any order.
+
+Example :
+Input table:
+
+
+Expected Output :
+
+
+*/
+def filter_high_rated_expensive(df):
+    # Code Here 
+    filtered_df = df[
+        (df['rating'] >= 4.5) &
+        (df['quantity_in_stock'] > 0) &
+        (df['price'] >= 300)
+    ]
+    
+    return filtered_df[['product_id', 'product_name', 'rating', 'quantity_in_stock', 'price']]
