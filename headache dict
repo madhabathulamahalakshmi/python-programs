@@ -1,0 +1,46 @@
+# insert into dictionary
+def insert_dict(query, d):
+    key = query[1]
+    value = query[2]
+    d[key] = value
+    return "Inserted"
+
+
+# deleting from dictionary
+def del_dict(query, d):
+    key = query[1]
+    if key in d:
+        del d[key]
+        return "Deleted"
+    else:
+        return "-1"
+
+
+# print marks of required name
+def print_dict(key, d):
+    if key in d:
+        print("Marks of " + key + " is " + str(d[key]))
+    else:
+        print("-1")
+
+
+
+
+#Input:
+N = 5
+i geeks 100
+i for 200
+d geeks
+i geeks 300
+p geeks
+Output:
+Inserted
+Inserted
+Deleted
+Inserted
+Marks of geeks is 300
+Explanation:
+For first four queries, insert and del 
+operation happens, correspondingly Inserted 
+And Deleted is printed. For the last query, 
+marks of geeks is printed.
