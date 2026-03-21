@@ -1,0 +1,7 @@
+list1 = list(map(int, input("Enter list1: ").split()))
+list2 = list(map(int, input("Enter list2: ").split()))
+
+if list1 == list2:
+    print("Lists are equal")
+else:
+    print("Lists are not equal")
